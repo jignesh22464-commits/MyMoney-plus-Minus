@@ -3,12 +3,39 @@
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#f4f7fb;color:#172033}button,input,select{font:inherit}header{background:linear-gradient(135deg,#1565c0,#2684e8);color:#fff;padding:24px 18px 28px;border-radius:0 0 28px 28px}header h1{margin:0;font-size:34px}header .tag{margin-top:4px;font-size:15px;opacity:.9}main{padding:16px 14px 92px;max-width:720px;margin:auto}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.card,.panel{background:#fff;border-radius:18px;padding:17px;box-shadow:0 3px 14px #17203312}.label{font-size:15px;color:#69758a}.value{font-size:27px;font-weight:750;margin-top:6px}.remaining{margin:12px 0;background:#e8f3ff;border-radius:20px;padding:18px}.remaining .value{font-size:36px;color:#1565c0}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}.btn{border:0;border-radius:14px;padding:14px;font-weight:750;background:#fff;box-shadow:0 3px 12px #17203314}.primary{background:#1976d2;color:#fff}.tx{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid #edf0f5}.tx:last-child{border-bottom:0}.tx small{display:block;color:#748096;margin-top:4px;line-height:1.35}.in{color:#16803c}.out{color:#c62828}.inv{color:#6a1b9a}.bottom{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #dfe4ec;display:flex;justify-content:space-around;padding:8px max(8px,env(safe-area-inset-left)) calc(8px + env(safe-area-inset-bottom));z-index:20}.nav{border:0;background:none;color:#1684e8;font-size:12px;min-width:68px}.nav b{display:block;font-size:22px;line-height:23px}.sheet{position:fixed;inset:0;background:#0006;display:none;align-items:flex-end;z-index:30}.modal{background:#fff;border-radius:26px 26px 0 0;padding:20px;width:100%;max-height:94vh;overflow:auto}.modal h2{margin:0 0 14px;font-size:28px}.field{margin:13px 0}.field label{display:block;font-size:14px;font-weight:700;margin-bottom:7px}.field input,.field select{width:100%;padding:13px;border:1px solid #d5dce7;border-radius:13px;font-size:17px;background:#fff}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.modalActions{display:flex;gap:10px;margin-top:18px}.modalActions button{flex:1}.choice{width:100%;padding:16px;margin:7px 0;border:1px solid #dce3ee;background:#f8fafc;border-radius:14px;text-align:left;font-weight:750}.choice small{font-weight:500;color:#68758a}.tabs{display:flex;gap:7px;overflow:auto;margin:12px 0}.tab{white-space:nowrap;border:1px solid #d8dfeb;background:#fff;border-radius:999px;padding:9px 14px}.tab.active{background:#1976d2;color:#fff;border-color:#1976d2}.calhead{display:flex;align-items:center;justify-content:space-between;margin:5px 0 14px}.calhead button{border:0;background:#eef4fb;border-radius:12px;width:42px;height:42px}.caltitle{text-align:center;font-size:24px;font-weight:800}.week,.calgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.week div{text-align:center;color:#718097;font-weight:700;font-size:12px;padding:4px 0}.day{min-height:58px;background:#fff;border-radius:11px;padding:6px;position:relative;border:1px solid transparent;appearance:none;-webkit-appearance:none;color:#172033;touch-action:manipulation;cursor:pointer}.day.muted{opacity:.35}.day.today{border-color:#1976d2}.day.selected{box-shadow:inset 0 0 0 2px #1976d2}.num{font-size:13px;font-weight:700}.dots{display:flex;gap:3px;flex-wrap:wrap;margin-top:8px}.dot{width:7px;height:7px;border-radius:50%}.dot.in{background:#16a34a}.dot.out{background:#dc2626}.dot.inv{background:#7e22ce}.planned{background:#fff8e8;border:1px solid #f2dfad}.datebox{margin-top:12px}.item{padding:11px 0;border-bottom:1px solid #edf0f5;display:flex;justify-content:space-between;gap:10px}.item:last-child{border-bottom:0}.badge{font-size:11px;padding:4px 7px;border-radius:999px;background:#eef4fb;color:#516078}.sectionTitle{font-size:19px;font-weight:800;margin-bottom:10px}.reportrow{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #edf0f5}.reportrow:last-child{border-bottom:0}.muted{color:#758198}.empty{text-align:center;color:#788397;padding:20px}.danger{color:#c62828}.mini{font-size:12px;color:#68758a}.switch{display:flex;gap:8px;align-items:center}.switch input{width:auto}.future{border-left:4px solid #1976d2;padding-left:10px}.reportdot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px}.reportdot.in{background:#16a34a}.reportdot.out{background:#dc2626}.reportdot.inv{background:#7e22ce}.goalbar{height:10px;background:#e9eef5;border-radius:999px;overflow:hidden;margin-top:8px}.goalfill{height:100%;background:#1976d2;border-radius:999px}.goalrow{padding:13px 0;border-bottom:1px solid #edf0f5}.goalrow:last-child{border-bottom:0}.goalmeta{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.goalactions{display:flex;gap:7px;margin-top:9px}.goalactions button{padding:8px 10px}.plannedSmall{display:block;color:#758198;font-size:11px;margin-top:2px}
 @media(max-width:480px){.two{grid-template-columns:1fr}.value{font-size:24px}.remaining .value{font-size:33px}.day{min-height:54px}}
-</style></head>
+</style>
+<style>
+#backupScreen .topbar{display:flex;align-items:center;gap:10px}
+#backupScreen .back{border:0;background:none;font-size:32px}
+#backupScreen .primary{width:100%;padding:13px;border:0;border-radius:12px;font-weight:700}
+#backupScreen input[type=file]{width:100%;padding:10px;border:1px solid #ddd;border-radius:10px}
+.muted{opacity:.72}
+.backupFab{position:fixed;right:16px;bottom:78px;padding:10px 14px;border:0;border-radius:12px}
+</style>
+
+</head>
 <body>
 <header><h1>MyMoney+</h1><div class="tag">Simple • Professional • Offline</div></header>
 <main id="app"></main>
-<nav class="bottom"><button class="nav" onclick="home()"><b>⌂</b>Home</button><button class="nav" onclick="calendar()"><b>▦</b>Calendar</button><button class="nav" onclick="goals()"><b>◎</b>Goals</button><button class="nav" onclick="addChoice()"><b>＋</b>Add</button><button class="nav" onclick="reports()"><b>◔</b>Reports</button></nav>
+<nav class="bottom"><button class="nav" onclick="home()"><b>⌂</b>Home</button><button class="nav" onclick="calendar()"><b>▦</b>Calendar</button><button class="nav" onclick="goals()"><b>◎</b>Goals</button><button class="nav" onclick="addChoice()"><b>＋</b>Add</button><button class="nav" onclick="reports()"><b>◔</b>Reports</button><button onclick="show('backupScreen')">💾<span>Backup</span></button></nav>
 <div id="sheet" class="sheet" onclick="if(event.target===this)closeSheet()"><div id="modal" class="modal"></div></div>
+
+<section id="backupScreen" class="screen">
+  <div class="topbar"><button class="back" onclick="show('home')">‹</button><h2>Backup & Restore</h2></div>
+  <div class="card">
+    <h3>Backup Your Data</h3>
+    <p class="muted">Save Income, Expenses, Investments, Savings Goals and app data in one backup file.</p>
+    <button class="primary" onclick="backupData()">⬇️ Backup Data</button>
+    <div id="backupStatus" class="muted" style="margin-top:10px"></div>
+  </div>
+  <div class="card">
+    <h3>Restore Your Data</h3>
+    <p class="muted">Choose a MyMoney+ backup file to restore your data.</p>
+    <input id="restoreFile" type="file" accept=".json,application/json" onchange="restoreData(this)">
+    <p class="muted" style="margin-top:8px">⚠️ Restore replaces the current MyMoney+ data on this device.</p>
+  </div>
+</section>
+
 <script>
 const K='mymoneyplus_v6';let goalsData=[];let goalEditId=null;const K17='mymoneyplus_v17';let d=[];let editId=null;let calDate=new Date();let selectedDate=null;let calFilter='all';
 try{const raw=localStorage.getItem(K);d=raw?JSON.parse(raw):[];if(!Array.isArray(d))d=[]}catch(e){d=[]}try{const gr=localStorage.getItem('mymoneyplus_goals_v1');goalsData=gr?JSON.parse(gr):[];if(!Array.isArray(goalsData))goalsData=[]}catch(e){goalsData=[]}
@@ -83,4 +110,48 @@ function sumKind(arr,kind){return arr.filter(x=>x.kind===kind).reduce((a,x)=>a+N
 function reportTab(type){let base=calDate||new Date(),p=periodBounds(type,base),actual=actualForPeriod(p.start,p.end),planned=plannedForPeriod(p.start,p.end);let ai=sumKind(actual,'income'),ae=sumKind(actual,'expense'),av=sumKind(actual,'investment'),pi=sumKind(planned,'income'),pe=sumKind(planned,'expense'),pv=sumKind(planned,'investment');let rows=[['Income',ai,pi,'in'],['Expenses',ae,pe,'out'],['Investments',av,pv,'inv']];let category={};planned.forEach(x=>{let key=`${x.kind==='income'?'Income':x.kind==='investment'?'Investment':'Expense'} • ${x.category}${x.sub?' • '+x.sub:''}`;category[key]=(category[key]||0)+Number(x.amount||0)});let cats=Object.entries(category).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<div class=\"reportrow\"><span>${esc(k)}</span><b>${money(v)}</b></div>`).join('');let ar=rows.map(([name,a,pv2,cl])=>`<div class=\"reportrow\"><span><span class=\"reportdot ${cl}\"></span>${name}</span><span><b>${money(a)}</b><small class=\"plannedSmall\">Planned ${money(pv2)}</small></span></div>`).join('');return `<div class=\"panel\"><div class=\"sectionTitle\">Reports</div><div class=\"tabs\">${['monthly','quarterly','yearly'].map(t=>`<button class=\"tab ${t===type?'active':''}\" onclick=\"reports('${t}')\">${t[0].toUpperCase()+t.slice(1)}</button>`).join('')}</div><h3>${esc(p.label)}</h3><div class="mini" style="margin:-4px 0 12px">Period: ${localDate(p.start)} to ${localDate(p.end)} · Recurring schedules are counted for every occurrence in this period.</div>${ar}<div class=\"reportrow\"><span><b>Actual Remaining</b></span><b>${money(ai-ae-av)}</b></div><div class=\"reportrow\"><span><b>Planned Remaining</b></span><b>${money(pi-pe-pv)}</b></div><div class=\"panel\" style=\"margin-top:12px;background:#f7faff;box-shadow:none\"><div class=\"sectionTitle\">Planned vs Actual</div><div class=\"mini\">Actual spending: ${money(ae+av)} · Planned spending: ${money(pe+pv)}</div></div><div style=\"margin-top:14px\"><div class=\"sectionTitle\">Planned by Category</div>${cats||'<div class=\"empty\">No scheduled items in this period</div>'}</div><div class=\"mini\" style=\"margin-top:12px\">Recurring entries are included automatically in the selected period. Actual totals include only entries you have saved.</div></div>`}
 function reports(type='monthly'){$('app').innerHTML=reportTab(type)}
 home();
-</script></body></html>
+</script>
+<script>
+function myMoneyBackupPayload(){
+  const payload={version:"MyMoney+ v24",createdAt:new Date().toISOString(),localStorage:{}};
+  for(let i=0;i<localStorage.length;i++){
+    const k=localStorage.key(i);
+    if(k!==null) payload.localStorage[k]=localStorage.getItem(k);
+  }
+  return payload;
+}
+function backupData(){
+  const payload=myMoneyBackupPayload();
+  const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement("a");
+  const d=new Date(), pad=n=>String(n).padStart(2,"0");
+  a.href=url;
+  a.download="MyMoneyPlus_Backup_"+d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+"_"+pad(d.getHours())+pad(d.getMinutes())+".json";
+  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+  const s=document.getElementById("backupStatus");
+  if(s) s.textContent="Backup created: "+d.toLocaleString();
+}
+function restoreData(input){
+  const file=input.files && input.files[0];
+  if(!file) return;
+  const reader=new FileReader();
+  reader.onload=function(){
+    try{
+      const payload=JSON.parse(reader.result);
+      if(!payload || payload.version===undefined || !payload.localStorage) throw new Error("Invalid backup");
+      if(!confirm("Restore this backup? Your current MyMoney+ data on this device will be replaced.")) { input.value=""; return; }
+      localStorage.clear();
+      Object.keys(payload.localStorage).forEach(k=>localStorage.setItem(k,payload.localStorage[k]));
+      alert("Data restored successfully. MyMoney+ will reload now.");
+      location.reload();
+    }catch(e){
+      alert("This is not a valid MyMoney+ backup file.");
+      input.value="";
+    }
+  };
+  reader.readAsText(file);
+}
+</script>
+
+</body></html>
