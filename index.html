@@ -21,7 +21,7 @@
 <div id="sheet" class="sheet" onclick="if(event.target===this)closeSheet()"><div id="modal" class="modal"></div></div>
 
 <section id="backupScreen" class="screen">
-  <div class="topbar"><button class="back" onclick="home()">‹</button><h2>Backup & Restore</h2></div>
+  <div class="topbar"><button class="back" onclick="backupBack()">‹</button><h2>Backup & Restore</h2></div>
   <div class="card">
     <h3>Backup Your Data</h3>
     <p class="muted">Save Income, Expenses, Investments, Savings Goals and app data in one backup file.</p>
@@ -127,8 +127,9 @@ home();
 <script>
 function backupScreen(){
   const s=document.getElementById('backupScreen');
-  if(s) show(s.innerHTML);
+  if(s){ show(s.innerHTML); }
 }
+function backupBack(){ closeSheet(); home(); }
 function myMoneyBackupPayload(){
   const payload={
     version:"MyMoney+ v25",
