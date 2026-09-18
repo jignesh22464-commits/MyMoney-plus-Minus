@@ -1,5 +1,5 @@
 <!doctype html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#1976d2"><title>MyMoney+ v24</title>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#1976d2"><title>MyMoney+ v25</title>
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#f4f7fb;color:#172033}button,input,select{font:inherit}header{background:linear-gradient(135deg,#1565c0,#2684e8);color:#fff;padding:24px 18px 28px;border-radius:0 0 28px 28px}header h1{margin:0;font-size:34px}header .tag{margin-top:4px;font-size:15px;opacity:.9}main{padding:16px 14px 92px;max-width:720px;margin:auto}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.card,.panel{background:#fff;border-radius:18px;padding:17px;box-shadow:0 3px 14px #17203312}.label{font-size:15px;color:#69758a}.value{font-size:27px;font-weight:750;margin-top:6px}.remaining{margin:12px 0;background:#e8f3ff;border-radius:20px;padding:18px}.remaining .value{font-size:36px;color:#1565c0}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}.btn{border:0;border-radius:14px;padding:14px;font-weight:750;background:#fff;box-shadow:0 3px 12px #17203314}.primary{background:#1976d2;color:#fff}.tx{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid #edf0f5}.tx:last-child{border-bottom:0}.tx small{display:block;color:#748096;margin-top:4px;line-height:1.35}.in{color:#16803c}.out{color:#c62828}.inv{color:#6a1b9a}.bottom{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #dfe4ec;display:flex;justify-content:space-around;padding:8px max(8px,env(safe-area-inset-left)) calc(8px + env(safe-area-inset-bottom));z-index:20}.nav{border:0;background:none;color:#1684e8;font-size:12px;min-width:68px}.nav b{display:block;font-size:22px;line-height:23px}.sheet{position:fixed;inset:0;background:#0006;display:none;align-items:flex-end;z-index:30}.modal{background:#fff;border-radius:26px 26px 0 0;padding:20px;width:100%;max-height:94vh;overflow:auto}.modal h2{margin:0 0 14px;font-size:28px}.field{margin:13px 0}.field label{display:block;font-size:14px;font-weight:700;margin-bottom:7px}.field input,.field select{width:100%;padding:13px;border:1px solid #d5dce7;border-radius:13px;font-size:17px;background:#fff}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.modalActions{display:flex;gap:10px;margin-top:18px}.modalActions button{flex:1}.choice{width:100%;padding:16px;margin:7px 0;border:1px solid #dce3ee;background:#f8fafc;border-radius:14px;text-align:left;font-weight:750}.choice small{font-weight:500;color:#68758a}.tabs{display:flex;gap:7px;overflow:auto;margin:12px 0}.tab{white-space:nowrap;border:1px solid #d8dfeb;background:#fff;border-radius:999px;padding:9px 14px}.tab.active{background:#1976d2;color:#fff;border-color:#1976d2}.calhead{display:flex;align-items:center;justify-content:space-between;margin:5px 0 14px}.calhead button{border:0;background:#eef4fb;border-radius:12px;width:42px;height:42px}.caltitle{text-align:center;font-size:24px;font-weight:800}.week,.calgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.week div{text-align:center;color:#718097;font-weight:700;font-size:12px;padding:4px 0}.day{min-height:58px;background:#fff;border-radius:11px;padding:6px;position:relative;border:1px solid transparent;appearance:none;-webkit-appearance:none;color:#172033;touch-action:manipulation;cursor:pointer}.day.muted{opacity:.35}.day.today{border-color:#1976d2}.day.selected{box-shadow:inset 0 0 0 2px #1976d2}.num{font-size:13px;font-weight:700}.dots{display:flex;gap:3px;flex-wrap:wrap;margin-top:8px}.dot{width:7px;height:7px;border-radius:50%}.dot.in{background:#16a34a}.dot.out{background:#dc2626}.dot.inv{background:#7e22ce}.planned{background:#fff8e8;border:1px solid #f2dfad}.datebox{margin-top:12px}.item{padding:11px 0;border-bottom:1px solid #edf0f5;display:flex;justify-content:space-between;gap:10px}.item:last-child{border-bottom:0}.badge{font-size:11px;padding:4px 7px;border-radius:999px;background:#eef4fb;color:#516078}.sectionTitle{font-size:19px;font-weight:800;margin-bottom:10px}.reportrow{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #edf0f5}.reportrow:last-child{border-bottom:0}.muted{color:#758198}.empty{text-align:center;color:#788397;padding:20px}.danger{color:#c62828}.mini{font-size:12px;color:#68758a}.switch{display:flex;gap:8px;align-items:center}.switch input{width:auto}.future{border-left:4px solid #1976d2;padding-left:10px}.reportdot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px}.reportdot.in{background:#16a34a}.reportdot.out{background:#dc2626}.reportdot.inv{background:#7e22ce}.goalbar{height:10px;background:#e9eef5;border-radius:999px;overflow:hidden;margin-top:8px}.goalfill{height:100%;background:#1976d2;border-radius:999px}.goalrow{padding:13px 0;border-bottom:1px solid #edf0f5}.goalrow:last-child{border-bottom:0}.goalmeta{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.goalactions{display:flex;gap:7px;margin-top:9px}.goalactions button{padding:8px 10px}.plannedSmall{display:block;color:#758198;font-size:11px;margin-top:2px}
 @media(max-width:480px){.two{grid-template-columns:1fr}.value{font-size:24px}.remaining .value{font-size:33px}.day{min-height:54px}}
@@ -117,11 +117,23 @@ function backupScreen(){
   if(s) show(s.innerHTML);
 }
 function myMoneyBackupPayload(){
-  const payload={version:"MyMoney+ v24",createdAt:new Date().toISOString(),localStorage:{}};
-  for(let i=0;i<localStorage.length;i++){
-    const k=localStorage.key(i);
-    if(k!==null) payload.localStorage[k]=localStorage.getItem(k);
-  }
+  const payload={
+    version:"MyMoney+ v25",
+    createdAt:new Date().toISOString(),
+    data: Array.isArray(d)?d:[],
+    goals: Array.isArray(goalsData)?goalsData:[],
+    localStorage:{}
+  };
+  // Keep any other app settings stored in localStorage too.
+  try{
+    for(let i=0;i<localStorage.length;i++){
+      const k=localStorage.key(i);
+      if(k!==null) payload.localStorage[k]=localStorage.getItem(k);
+    }
+  }catch(e){}
+  // Explicitly include the two data stores used by MyMoney+.
+  payload.localStorage[K]=JSON.stringify(payload.data);
+  payload.localStorage['mymoneyplus_goals_v1']=JSON.stringify(payload.goals);
   return payload;
 }
 function backupData(){
@@ -129,12 +141,13 @@ function backupData(){
   const blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});
   const url=URL.createObjectURL(blob);
   const a=document.createElement("a");
-  const d=new Date(), pad=n=>String(n).padStart(2,"0");
+  const dt=new Date(), pad=n=>String(n).padStart(2,"0");
   a.href=url;
-  a.download="MyMoneyPlus_Backup_"+d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+"_"+pad(d.getHours())+pad(d.getMinutes())+".json";
-  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+  a.download="MyMoneyPlus_Backup_"+dt.getFullYear()+pad(dt.getMonth()+1)+pad(dt.getDate())+"_"+pad(dt.getHours())+pad(dt.getMinutes())+".json";
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
   const s=document.getElementById("backupStatus");
-  if(s) s.textContent="Backup created: "+d.toLocaleString();
+  if(s) s.textContent="Backup created: "+dt.toLocaleString();
 }
 function restoreData(input){
   const file=input.files && input.files[0];
@@ -143,14 +156,25 @@ function restoreData(input){
   reader.onload=function(){
     try{
       const payload=JSON.parse(reader.result);
-      if(!payload || payload.version===undefined || !payload.localStorage) throw new Error("Invalid backup");
-      if(!confirm("Restore this backup? Your current MyMoney+ data on this device will be replaced.")) { input.value=""; return; }
-      localStorage.clear();
-      Object.keys(payload.localStorage).forEach(k=>localStorage.setItem(k,payload.localStorage[k]));
+      if(!payload || !Array.isArray(payload.data) || !Array.isArray(payload.goals))
+        throw new Error("Invalid backup");
+      if(!confirm("Restore this backup? Your current MyMoney+ data on this device will be replaced.")){
+        input.value=""; return;
+      }
+      // Restore the explicit MyMoney+ data stores.
+      localStorage.setItem(K,JSON.stringify(payload.data));
+      localStorage.setItem('mymoneyplus_goals_v1',JSON.stringify(payload.goals));
+      // Restore any other saved settings from the backup.
+      if(payload.localStorage && typeof payload.localStorage==="object"){
+        Object.keys(payload.localStorage).forEach(k=>{
+          if(k!==K && k!=='mymoneyplus_goals_v1')
+            localStorage.setItem(k,payload.localStorage[k]);
+        });
+      }
       alert("Data restored successfully. MyMoney+ will reload now.");
       location.reload();
     }catch(e){
-      alert("This is not a valid MyMoney+ backup file.");
+      alert("This is not a valid MyMoney+ v25 backup file.");
       input.value="";
     }
   };
